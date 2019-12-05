@@ -154,8 +154,9 @@ body {
     background: #000;
   }
 
-  .header__logo-pic {
-    padding: 42px 0 0 55px;
+  .header__logo-wrap .header__logo-pic {
+    display: block;
+    margin: 0;
   }
 
   .header__lang-switcher {
@@ -224,14 +225,16 @@ body {
   display: flex;
   flex-flow: column;
   justify-content:flex-end;
+}
 
-
+.product__img_grey {
+  display: none;
 }
 
 .promo__title {
   z-index: 10;
   padding-left: 26px;
-  font-weight: bold;
+  font-family: 'montserrat_bold';
   line-height: 51px;
   font-size: 50px;
 }
@@ -272,7 +275,9 @@ body {
     display: flex;
     flex-flow: column;
   }
-
+  .product__img_grey {
+    display: block;
+  }
   .promo__wrap {
     height: 716px;
     display: flex;
@@ -419,7 +424,7 @@ body {
 .product__img_pink{
   position: absolute;
   width: 80%;
-  right: 0;
+  right: 32px;
   height: auto;
 }
 
@@ -452,6 +457,7 @@ body {
 }
 
 .product__title{
+  font-family: 'montserrat_bold';
   height: 0;
 }
 
@@ -781,6 +787,7 @@ body {
 .look__title {
   margin-bottom: 0;
   margin-top: 26px;
+  font-family: 'montserrat_bold';
 }
 
 .look__subtitle {
@@ -863,8 +870,21 @@ body {
     top: 15px;
   }
 }
+.header__lang {
+  display: none;
+}
+.header__logo-pic {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  margin: 0 20px;
+}
+
 
 @media (min-width: 992px) {
+  .header__lang {
+    display: block;
+  }
   .look {
     background: linear-gradient(to right, #EBE3D8 388px, #000 388px, #000 461px, #EBE3D8 461px);
     display: flex;
